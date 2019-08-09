@@ -1,0 +1,44 @@
+const gulp = require('gulp');
+const rsync = require('gulp-rsync');
+const sftp = require('gulp-sftp');
+
+const {config} = require('../config/');
+
+const deployRemote = (src, dest) => {
+
+
+    if(config.rsync.active) {
+        const options = {
+            hostname: config.rsync.hostname,
+            destination: config.rsync.destination  + config.projectName,
+            root: config.destFolder,
+            username: config.rsync.username,
+            port: config.rsync.port,
+            incremental: true,
+            progress: true,
+            recursive: true,
+            clean: true,
+            exclude: ['.git', '*.scss']
+        }
+        console.log( options )
+        console.log( src + ' dest: ' + dest)
+        console.log( 'srcFolder: ' + config.srcFolder)
+        return gulp.src( src )  //config.destFolder + '/**'
+            .pipe(rsync( options ))
+    }
+
+    if(config.sftp.active) {
+        return gulp.src([src])
+            .pipe(sftp( {
+                host: config.sftp.hostname,
+                user: config.sftp.username,
+                pass: config.sftp.pw,
+                port: config.sftp.port,
+                remotePath: config.sftp.remotePath + config.projectName + '/' + dest,
+            }));
+    }
+
+    console.log('Did not deploy');
+};
+
+module.exports = deployRemote;

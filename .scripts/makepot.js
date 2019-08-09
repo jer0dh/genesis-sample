@@ -5,12 +5,14 @@
 
 const chalk = require('chalk');
 const wpi18n = require('node-wp-i18n');
-
+const {config} = require('../gulpfile.js/config/');
+ console.log( config )
 console.log(chalk`{cyan Making pot file}...`);
 
 wpi18n.makepot(
 	{
-		domainPath: 'languages',
+		domainPath: `${config.destFolder}/languages`,
+		cwd: config.srcFolder,
 		potHeaders: {
 			'poedit': true,
 			'x-poedit-basepath': '..',

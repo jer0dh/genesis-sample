@@ -1,22 +1,20 @@
-/*
-Theme Name: Genesis Sample
-Theme URI: https://demo.studiopress.com/
-Description: This is the sample theme created for the Genesis Framework.
-Author: StudioPress
-Author URI: https://www.studiopress.com/
+/*!
+	Theme Name: <%= pkg.theme.name %>
+	Theme URI: <%= pkg.theme.uri %>
+	Description: <%= pkg.theme.description %>
+	Author: <%= pkg.theme.author %>
+	Author URI: <%= pkg.theme.authoruri %>
+    Version: <%= pkg.version %>
+	Tags: <%= pkg.theme.tags %>
 
-Version: 3.0.1
+	Template: genesis
+	Template Version: <%= pkg.theme.genesisVersion %>
 
-Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
+	License: <%= pkg.theme.license %>
+	License URI: <%= pkg.theme.licenseuri %>
 
-Template: genesis
-
-License: GPL-2.0-or-later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
-Text Domain: genesis-sample
+    Text Domain: <%= pkg.theme.textdomain %>
 */
-
 
 /* Table of Contents
 - HTML5 Reset
