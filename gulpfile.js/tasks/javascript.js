@@ -27,7 +27,6 @@ function checkSrc(paths) {
 
   // Concatenate arrays of scripts
 const allScripts = config.projectVendorScripts.concat( config.projectScripts );
-console.log( allScripts )
 const negatedProjectVendorScripts = config.projectVendorScripts.map( (s) => '!' + s);
 const negatedProjectScripts = config.projectScripts.map( (s) => '!' + s);
 const negatedAllScripts = allScripts.map( (s) => '!' + s);

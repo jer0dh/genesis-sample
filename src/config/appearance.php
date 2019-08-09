@@ -36,7 +36,7 @@ return [
 	'default-colors'       => $genesis_sample_default_colors,
 	'editor-color-palette' => [
 		[
-			'name'  => __( 'Custom colorddd', '<%= pkg.theme.textdomain %>' ), // Called “Link Color” in the Customizer options. Renamed because “Link Color” implies it can only be used for links.
+			'name'  => __( 'Custom color', '<%= pkg.theme.textdomain %>' ), // Called “Link Color” in the Customizer options. Renamed because “Link Color” implies it can only be used for links.
 			'slug'  => 'theme-primary',
 			'color' => $genesis_sample_link_color,
 		],

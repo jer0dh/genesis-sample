@@ -20,9 +20,7 @@ const deployRemote = (src, dest) => {
             clean: true,
             exclude: ['.git', '*.scss']
         }
-        console.log( options )
-        console.log( src + ' dest: ' + dest)
-        console.log( 'srcFolder: ' + config.srcFolder)
+
         return gulp.src( src )  //config.destFolder + '/**'
             .pipe(rsync( options ))
     }
