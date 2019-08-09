@@ -35,8 +35,8 @@ function genesis_sample_customizer_register( $wp_customize ) {
 			$wp_customize,
 			'genesis_sample_link_color',
 			[
-				'description' => __( 'Change the color of post info links and button blocks, the hover color of linked titles and menu items, and more.', 'genesis-sample' ),
-				'label'       => __( 'Link Color', 'genesis-sample' ),
+				'description' => __( 'Change the color of post info links and button blocks, the hover color of linked titles and menu items, and more.', '<%= pkg.theme.textdomain %>' ),
+				'label'       => __( 'Link Color', '<%= pkg.theme.textdomain %>' ),
 				'section'     => 'colors',
 				'settings'    => 'genesis_sample_link_color',
 			]
@@ -56,8 +56,8 @@ function genesis_sample_customizer_register( $wp_customize ) {
 			$wp_customize,
 			'genesis_sample_accent_color',
 			[
-				'description' => __( 'Change the default hover color for button links, menu buttons, and submit buttons. The button block uses the Link Color.', 'genesis-sample' ),
-				'label'       => __( 'Accent Color', 'genesis-sample' ),
+				'description' => __( 'Change the default hover color for button links, menu buttons, and submit buttons. The button block uses the Link Color.', '<%= pkg.theme.textdomain %>' ),
+				'label'       => __( 'Accent Color', '<%= pkg.theme.textdomain %>' ),
 				'section'     => 'colors',
 				'settings'    => 'genesis_sample_accent_color',
 			]
@@ -76,8 +76,8 @@ function genesis_sample_customizer_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_logo_width',
 		[
-			'label'       => __( 'Logo Width', 'genesis-sample' ),
-			'description' => __( 'The maximum width of the logo in pixels.', 'genesis-sample' ),
+			'label'       => __( 'Logo Width', '<%= pkg.theme.textdomain %>' ),
+			'description' => __( 'The maximum width of the logo in pixels.', '<%= pkg.theme.textdomain %>' ),
 			'priority'    => 9,
 			'section'     => 'title_tagline',
 			'settings'    => 'genesis_sample_logo_width',

@@ -16,22 +16,22 @@
 return [
 	'plugins'          => [
 		[
-			'name'       => __( 'Atomic Blocks', 'genesis-sample' ),
+			'name'       => __( 'Atomic Blocks', '<%= pkg.theme.textdomain %>' ),
 			'slug'       => 'atomic-blocks/atomicblocks.php',
 			'public_url' => 'https://atomicblocks.com/',
 		],
 		[
-			'name'       => __( 'Simple Social Icons', 'genesis-sample' ),
+			'name'       => __( 'Simple Social Icons', '<%= pkg.theme.textdomain %>' ),
 			'slug'       => 'simple-social-icons/simple-social-icons.php',
 			'public_url' => 'https://wordpress.org/plugins/simple-social-icons/',
 		],
 		[
-			'name'       => __( 'Genesis eNews Extended (Third Party)', 'genesis-sample' ),
+			'name'       => __( 'Genesis eNews Extended (Third Party)', '<%= pkg.theme.textdomain %>' ),
 			'slug'       => 'genesis-enews-extended/plugin.php',
 			'public_url' => 'https://wordpress.org/plugins/genesis-enews-extended/',
 		],
 		[
-			'name'       => __( 'WPForms Lite (Third Party)', 'genesis-sample' ),
+			'name'       => __( 'WPForms Lite (Third Party)', '<%= pkg.theme.textdomain %>' ),
 			'slug'       => 'wpforms-lite/wpforms.php',
 			'public_url' => 'https://wordpress.org/plugins/wpforms-lite/',
 		],

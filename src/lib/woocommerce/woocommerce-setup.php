@@ -70,8 +70,8 @@ add_filter( 'woocommerce_pagination_args', 'genesis_sample_woocommerce_paginatio
  */
 function genesis_sample_woocommerce_pagination( $args ) {
 
-	$args['prev_text'] = sprintf( '&laquo; %s', __( 'Previous Page', 'genesis-sample' ) );
-	$args['next_text'] = sprintf( '%s &raquo;', __( 'Next Page', 'genesis-sample' ) );
+	$args['prev_text'] = sprintf( '&laquo; %s', __( 'Previous Page', '<%= pkg.theme.textdomain %>' ) );
+	$args['next_text'] = sprintf( '%s &raquo;', __( 'Next Page', '<%= pkg.theme.textdomain %>' ) );
 
 	return $args;
 

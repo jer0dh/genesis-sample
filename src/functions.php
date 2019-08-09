@@ -27,6 +27,7 @@ function genesis_sample_localization_setup() {
 	load_child_theme_textdomain( genesis_get_theme_handle(), get_stylesheet_directory() . '/languages' );
 
 }
+echo __('HellsBells', 'jh-dev');
 
 // Adds helper functions.
 require_once get_stylesheet_directory() . '/lib/helper-functions.php';
