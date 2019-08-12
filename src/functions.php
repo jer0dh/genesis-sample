@@ -31,6 +31,12 @@ function genesis_sample_localization_setup() {
 // Adds helper functions.
 require_once get_stylesheet_directory() . '/lib/helper-functions.php';
 
+// Adds Bootstrap functions.
+require_once get_stylesheet_directory() . '/lib/bootstrap.php';
+
+// Adds Footer functions.
+require_once get_stylesheet_directory() . '/lib/footer.php';
+
 // Adds image upload and color select to Customizer.
 require_once get_stylesheet_directory() . '/lib/customize.php';
 

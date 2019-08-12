@@ -1,34 +1,38 @@
 <?php
 if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-add_action( 'init', 'venus_init_structural_wrap');
+add_action( 'init', 'gdev_init_structural_wrap');
 
 /**
  * Defines where structural wraps will occur in theme and adds filter to each to change markup to bootstrap wrap
  *
  *
  */
-function venus_init_structural_wrap() {
+function gdev_init_structural_wrap() {
 
 	$structural_wraps = array(
 		'header',
 		'menu-secondary',
+		'site-inner',
 		'footer-widgets',
 		'footer'
 	);
 
 	$structural_wraps_with_col12 = array(
-		'header'
+		'header',
+		'menu-secondary',
+		'site-inner',
+		'footer'
 	);
 
 	add_theme_support( 'genesis-structural-wraps', $structural_wraps );
 
 	foreach( $structural_wraps as $wrap ) {
-		add_filter(  "genesis_structural_wrap-{$wrap}", 'venus_structural_wrap', 15, 2 );
+		add_filter(  "genesis_structural_wrap-{$wrap}", 'gdev_structural_wrap', 15, 2 );
 	}
 
 	foreach( $structural_wraps_with_col12 as $wrap ) {
-		add_filter( "genesis_structural_wrap-{$wrap}", 'venus_structural_wrap_col12', 16, 2);
+		add_filter( "genesis_structural_wrap-{$wrap}", 'gdev_structural_wrap_col12', 16, 2);
 	}
 }
 
@@ -40,7 +44,7 @@ function venus_init_structural_wrap() {
  *
  * @return string
  */
-function venus_structural_wrap( $output, $original_output ) {
+function gdev_structural_wrap( $output, $original_output ) {
 
 	switch ( $original_output ) {
 		case 'open':
@@ -61,7 +65,7 @@ function venus_structural_wrap( $output, $original_output ) {
  *
  * @return string
  */
-function venus_structural_wrap_col12( $output, $original_output ) {
+function gdev_structural_wrap_col12( $output, $original_output ) {
 
 	switch ( $original_output ) {
 		case 'open':
@@ -79,20 +83,20 @@ function venus_structural_wrap_col12( $output, $original_output ) {
  * For action hooks
  */
 
-function venus_add_structural_wrap_open() {
-	echo venus_structural_wrap('', 'open');
+function gdev_add_structural_wrap_open() {
+	echo gdev_structural_wrap('', 'open');
 }
 
-function venus_add_structural_wrap_close() {
-	echo venus_structural_wrap('', 'close');
+function gdev_add_structural_wrap_close() {
+	echo gdev_structural_wrap('', 'close');
 }
 
-function venus_add_structural_wrap_col12_open() {
-	venus_add_structural_wrap_open();
+function gdev_add_structural_wrap_col12_open() {
+	gdev_add_structural_wrap_open();
 	echo '<div class="col-12">';
 }
 
-function venus_add_structural_wrap_col12_close() {
+function gdev_add_structural_wrap_col12_close() {
 	echo '</div>';
-	venus_add_structural_wrap_close();
+	gdev_add_structural_wrap_close();
 }
