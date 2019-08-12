@@ -1,6 +1,6 @@
 {
 	"name": "genesis-dev",
-	"version": "3.0.13",
+	"version": "3.0.17",
 	"description": "Development files for the Genesis Framework.",
 	"repository": {
 		"type": "git",
@@ -8,10 +8,10 @@
 	},
 	"license": "GPL-2.0-or-later",
 	"devDependencies": {
-		"chalk": "^2.4.2",
-		"node-wp-i18n": "^1.2.3",
 		"@babel/core": "^7.5.5",
 		"@babel/preset-env": "^7.5.5",
+		"bootstrap": "^4.3.1",
+		"chalk": "^2.4.2",
 		"del": "^5.0.0",
 		"fs": "0.0.1-security",
 		"gulp": "^4.0.2",
@@ -29,8 +29,9 @@
 		"gulp-sftp": "^0.1.5",
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-template": "^5.0.0",
-		"through2": "^3.0.1",
-		"node-sass": "^4.12.0"
+		"node-sass": "^4.12.0",
+		"node-wp-i18n": "^1.2.3",
+		"through2": "^3.0.1"
 	},
 	"scripts": {
 		"autoprefixer": "postcss style.css lib/**/*.css --use autoprefixer --replace --no-map --verbose",

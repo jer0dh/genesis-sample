@@ -88,4 +88,22 @@ function minorVendorScripts() {
     .pipe( dest( config.destFolder + '/js/vendor'))
 }
 
-exports.javascript = parallel( mainScript, minorScripts, minorVendorScripts );
+/**
+ * Task to transcript and minify js in the template-parts or other locations in the theme_src
+ */
+
+function templatePartsScripts() {
+    return src([config.srcFolder + '/template-parts/**/*.js'])
+      //  .pipe(sourcemaps.init())
+        .pipe(babel())
+        .pipe(minify({
+            ext: {
+                min: '.min.js'
+            }
+        }))
+     //   .pipe(sourcemaps.write('./maps'))
+        .pipe( dest( config.destFolder + '/template-parts' ))
+}
+
+
+exports.javascript = parallel( mainScript, minorScripts, minorVendorScripts, templatePartsScripts );
