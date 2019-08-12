@@ -1,3 +1,37 @@
+/* Gutenberg front-end css */
+
+/*
+Issues with alignfull and Windows OS browsers.  Windows OS browsers do not include the width of the scrollbar in the
+vw calculation so using negative margins to spread the content from browser edge to browser edge causes the content on
+each side to appear half the scroll bar width too far.
+
+See:
+https://web-design-weekly.com/2014/11/18/viewport-units-vw-vh-vmin-vmax/
+
+https://github.com/WordPress/gutenberg/issues/8289
+
+
+So it still works for background images/colors to be the full width.  If content, need to add a bit of padding.
+
+ */
+
+.entry-content .alignfull {
+	margin-left: calc( -100vw / 2 + 100% / 2 );
+	margin-right: calc( -100vw / 2 + 100% / 2 );
+	max-width: 100vw;
+}
+
+/**
+ move margins halfway to edge of browser.  Could also use $grid-breakpoints and/or $container-max-widths to create
+ some media queries with specific changes in margins.
+ */
+.entry-content .alignwide {
+	margin-left: calc( -100vw / 4 + 100% / 4 );
+	margin-right: calc( -100vw / 4 + 100% / 4 );
+}
+
+/* From lib/gutenberg/front-end.css */
+
 /* Drop Caps
 ---------------------------------------------------------------------------- */
 

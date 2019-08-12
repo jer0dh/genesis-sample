@@ -1,3 +1,27 @@
+# Genesis Dev using Genesis Sample Theme
+> See original Docs below
+
+## Styles
+`config/appearance.php` holds 
+* default colors like links that can be edited by WP Customizer.  
+* A color palette that can be defined with custom colors 
+* Different font sizes that can be customized.
+> See `lib/gutenberg/inline-styles.php` that generates the inline styles for both colors and font sizes.
+* The Google Fonts URL that will be loaded in `functions.php` for front-end and in `lib/gutenberg/init.php` for editor
+
+Most SASS style files should be placed under `/css/supporting` and imported by main scss files.
+### Main Scss files
+* `/style.scss` - main front-end styling.  
+* `lib/gutenberg/style-editor.scss` - Loaded in the editor. Import your block styles here. Best if you can import a
+subset of the same scss files imported in the `/style.scss` 
+
+### Dynamically created inline styles
+* `/lib/output.php` creates inline styles for front-end. It uses the settings of `/config/appearance.php`
+* `/lib/gutenberg/inline-styles.php` creates inline styles for font-sizes and color palettes from `/config/appearance.php`
+for front-end and some for editor
+
+
+
 # Genesis Sample Theme
 
 GitHub project link: https://github.com/studiopress/genesis-sample/.
