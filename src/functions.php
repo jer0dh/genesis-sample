@@ -34,6 +34,9 @@ require_once get_stylesheet_directory() . '/lib/helper-functions.php';
 // Adds Bootstrap functions.
 require_once get_stylesheet_directory() . '/lib/bootstrap.php';
 
+// Adds Header functions.
+require_once get_stylesheet_directory() . '/lib/header.php';
+
 // Adds Footer functions.
 require_once get_stylesheet_directory() . '/lib/footer.php';
 

@@ -40,6 +40,7 @@
 }
 
 .genesis-nav-menu .sub-menu {
+	text-align: left;
 	clear: both;
 	display: none;
 	left: -9999px;
@@ -112,12 +113,13 @@
 }
 
 .menu-toggle {
-	float: right;
 	line-height: 1.333; //20px;
 	margin-bottom: to-em(10px, 15px);
 	margin-top: to-em(10px, 15px);
 	padding: 1em 0;
-	position: relative;
+	position: absolute;
+	right: 0;
+	top: 0;
 	z-index: 1000;
 }
 

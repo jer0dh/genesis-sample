@@ -19,7 +19,6 @@ function gdev_init_structural_wrap() {
 	);
 
 	$structural_wraps_with_col12 = array(
-		'header',
 		'menu-secondary',
 		'site-inner',
 		'footer'

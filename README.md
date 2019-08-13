@@ -20,7 +20,44 @@ subset of the same scss files imported in the `/style.scss`
 * `/lib/gutenberg/inline-styles.php` creates inline styles for font-sizes and color palettes from `/config/appearance.php`
 for front-end and some for editor
 
+## Bootstrap 4.x
+`lib/bootstrap.php` shows how we have setup the structural wraps to use bootstraps .container and .row.
+In the `gdev_init_structural_wrap` function the `$structural_wraps` array contains the standard locations
+where structural wraps are to be placed.  This will put the normal
+```html
+<div class="container">
+  <div class="row">
+  
+   </div>
+</div>
+```
+wrapped around the content of this location.  If no other column definitions are to be made to the content, then
+put the same location string in the `$structural_wraps_with_col12` array so the content will additionally be
+wrapped in a `<div class="col-12">`
 
+To put the extra bootstrap column classes to the content elements, take advantage of the genesis_attr() filter.
+
+For instance, in the header lets put the title-area in a `col-md-4` column and the primary nav in a `col-md-8` column:
+
+```php
+// Title-area
+add_filter( 'genesis_attr_title-area', function( $attributes ) {
+
+	$attributes['class'] .= ' col-md-4';
+
+	return $attributes;
+});
+
+// Nav
+add_filter( 'genesis_attr_nav-primary', function( $attributes ) {
+
+	$attributes['class'] .= ' col-md-8';
+
+	return $attributes;
+});
+
+
+```
 
 # Genesis Sample Theme
 

@@ -1,0 +1,28 @@
+
+
+
+	/* Site Header
+	--------------------------------------------- */
+
+	.site-header {
+
+		position: relative;
+
+		@include media('>md') {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			z-index: 9999;
+		}
+	}
+
+	.admin-bar .site-header {
+		top: 32px;
+	}
+
+
+
+
+.site-header > .container > .row {
+	position: relative;
+}
