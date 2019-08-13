@@ -18,5 +18,16 @@
 
 //@import "css/supporting/original";
 
+/* Variables
+NOTE: to override bootstrap vars, don't include the !default when assigning values.
+------------------------------------------------------------ */
+@import "css/supporting/vars";
+
+@import "css/supporting/mixin";
+
+/* Include-media
+-------------------------------------------------------- */
+@import "css/supporting/include-media";
+
 @import "css/supporting/bootstrap-cust";
 @import "css/supporting/gutenberg-front-end";

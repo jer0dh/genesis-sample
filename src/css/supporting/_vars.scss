@@ -1,0 +1,222 @@
+/* Breakpoints
+-------------------------------------- */
+
+$screen-xs-min:                0px;
+$screen-sm-min:              576px;
+$screen-md-min:              768px;  //main breakpoint
+$screen-lg-min:              992px;
+$screen-xl-min:              1350px;
+$screen-xxl-min:             1650px;
+$mobileMenu:                  991px;
+
+$grid-breakpoints: (
+	xs: $screen-xs-min,
+	sm: $screen-sm-min,
+	md: $screen-md-min,
+	mobileMenu: $mobileMenu,
+	lg: $screen-lg-min,
+	xl: $screen-xl-min/*,
+        xxl: $screen-xxl-min*/
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+/* Grid - Columns
+------------------------------------------ */
+
+$grid-columns:                12;
+$grid-gutter-width:           38px;
+
+
+$container-max-widths: (
+	sm: 526px,
+	md: 718px,
+	lg: 942px,
+	xl: 1300px,
+	xxl: 1600px
+);
+
+
+//Breakpoints for media queries  _include-media
+
+$breakpoints: (
+	xs: $screen-xs-min,
+	sm: $screen-sm-min,
+	md: $screen-md-min,
+	mobileMenu: $mobileMenu,
+	lg: $screen-lg-min,
+	xl: $screen-xl-min
+);
+
+
+/* Sizing
+----------------------------------------- */
+
+$max_screen_width: 1600px;
+$wrap-padding: 40px;
+
+$site-header-min-height: 160px;
+$site-header-padding-top: 0;
+$site-header-padding-bottom: 0px;
+
+$header-image-min-height: 0px;
+$sidebar-gutter: 20px;
+
+$main-margin-bottom: 60px;
+
+
+$section-tb-padding: 70px;
+
+
+/* margins
+------------------------------------- */
+
+$p_bottom_margin: 2.8rem;
+
+
+/* Colors
+------------------------------------ */
+
+
+//
+// Color system
+//
+
+$white:    #fff;    //theme color
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #231720;  //theme color
+
+$grays: (
+	"100": $gray-100,
+	"200": $gray-200,
+	"300": $gray-300,
+	"400": $gray-400,
+	"500": $gray-500,
+	"600": $gray-600,
+	"700": $gray-700,
+	"800": $gray-800,
+	"900": $gray-900
+);
+
+$gray-timeline: #3e3e40;  //timeline/community component color
+$blue:    #0b4167;  //theme color   GW-secondary
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #cf3a3a;  //theme color
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #013f34;  //theme color  TO-secondary
+$teal:    #20c997;
+$cyan:    #0094c6;  //theme-color - modal close button
+$gold:    #b2945e;  //theme-color - Luxury
+$brown:   #28120e;  //theme-color - Luxury
+
+$gray:    #939598;  //theme color
+$colors: (
+	"blue":       $blue,
+	"red":        $red,
+	"green":      $green,
+	"white":      $white,
+	"black":      $black,
+	"brown":      $brown,
+	"gold":       $gold
+);
+
+/* used to provide the text color on background of selected color */
+$text-colors: (
+	"blue":       $white,
+	"red":        $white,
+	"green":      $white,
+	"white":      $black,
+	"black":      $white,
+	"gold":       $gold
+);
+/* used to provide the anchor color on background of selected color */
+$anchor-colors: (
+	"blue":       $white,
+	"red":        $white,
+	"green":      $white,
+	"white":      $red,
+	"black":      $white,
+);
+
+
+// Colors that change depending on body class.  $primary <--> $secondary, $primary2 <--> $secondary2
+
+$primary:       $blue;
+$secondary:     $green;
+$primary2:      $red;
+$secondary2:    $black;
+
+$redBlack:      $red;  //button that will be red on GW and black on TO site
+
+$success:       $black;
+$info:          $red;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-300;
+$dark:          $gray-800;
+
+$theme-colors: (
+	"primary":    $primary,   //blue
+	"secondary":  $secondary,  //green
+	"success":    $success, //black
+	"info":       $info,  //red
+	"redBlack":    $black  //button that will be black on GW and red on TO site
+	/*                        "warning":    $warning,
+							"danger":     $danger,
+							"light":      $light,
+							"dark":       $dark*/
+);
+$btn-default-bg: map-get($theme-colors, 'primary');
+$btn-default-color: $white;
+
+$color-default: $black;
+$background-default: $white;
+$color-anchor-default: $red;
+$color-border-default: #dddddd;
+
+
+
+/*
+  Buttons
+  -------------------------------------------------------- */
+
+$btn-default-color:           $white;
+$btn-default-bg:               $blue;
+$btn-padding-y:               0.6rem;
+$btn-padding-x:               1rem;
+$btn-line-height:             1.5;
+
+$btn-font-weight:             300;
+$btn-box-shadow:              none;
+$btn-border-width:            1px;
+$btn-border-radius:           0;
+$btn-transition:              all .3s ease-in-out;
+$btn-border-width:            1px;
+
+
+$input-border-radius:       0;
+/* Typography
+------------------------------------- */
+
+$global-font-size: 20px;
+$font-default: 'Oxygen', sans-serif;
+$line-height-default: 1.65;
+
+$font_main: 'Oxygen', sans-serif;
+
+
+
+$form-group-margin-bottom:              10px ;  //match form-row padding grid.
