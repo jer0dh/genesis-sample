@@ -1,0 +1,55 @@
+/* Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $font-default;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 to-em(20px);
+}
+
+h1, .h1 {
+	font-size: to-em(30px);
+}
+
+h2, .h2 {
+	font-size: to-em(27px);
+}
+
+h3, .h3 {
+	font-size: to-em(24px);
+}
+
+h4, .h4 {
+	font-size: to-em(20px);
+}
+
+.entry-content {
+	h3, h4,
+	.h3, .h4 {
+		font-weight: 600;
+	}
+
+	h4, .h4 {
+		margin-top: to-em(40px);
+	}
+
+}
+h5, .h5 {
+	font-size: to-em(18px);
+}
+
+h6, .h6 {
+	font-size: to-em(16px);
+}

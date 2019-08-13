@@ -38,6 +38,38 @@ NOTE: to override bootstrap vars, don't include the !default when assigning valu
 @import "css/supporting/gutenberg-front-end";
 
 
+/* Typographical
+------------------------------------------------------------- */
+@import "css/supporting/typographical";
+
+
+/* Headings
+------------------------------------------------------------- */
+@import "css/supporting/headings";
+
+
+/* Objects
+------------------------------------------------------------- */
+@import "css/supporting/objects";
+
+
+/* Gallery
+------------------------------------------------------------- */
+@import "css/supporting/gallery";
+
+
 /* Menu/Nav
 ------------------------------------------------------------- */
 @import "css/supporting/nav";
+
+/* Screen reader
+------------------------------------------------------------- */
+@import "css/supporting/screen-reader";
+
+/* WordPress
+------------------------------------------------------------- */
+@import "css/supporting/wordpress";
+
+/* Comments
+------------------------------------------------------------- */
+@import "css/supporting/comments";

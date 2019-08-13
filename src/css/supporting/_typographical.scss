@@ -1,0 +1,85 @@
+/* Typographical Elements
+--------------------------------------------- */
+
+html {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background-color: $background-default;
+	color: $color-default;
+	font-family: $font-main;
+	font-size: $global-font-size;
+	font-weight: 400;
+	line-height: $line-height-default;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+	transition: all 0.2s ease-in-out;
+}
+
+a {
+	color: #0073e5;
+	text-decoration: underline;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+a:focus,
+a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 to-em(30px);
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+hr {
+	border: none;
+	border-collapse: collapse;
+	border-top: 1px solid #eee;
+	clear: both;
+	margin: to-em(30px) 0;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+mark {
+	background: #ddd;
+	color: #333;
+}
+
+blockquote {
+	margin: to-em(30px);
+}
