@@ -6,7 +6,7 @@
 * default colors like links that can be edited by WP Customizer.  
 * A color palette that can be defined with custom colors 
 * Different font sizes that can be customized.
-> See `lib/gutenberg/inline-styles.php` that generates the inline styles for both colors and font sizes.
+> See `lib/gutenberg/inline-styles.php` that generates the inline styles from `appearance.php` for both colors and font sizes.
 * The Google Fonts URL that will be loaded in `functions.php` for front-end and in `lib/gutenberg/init.php` for editor
 
 Most SASS style files should be placed under `/css/supporting` and imported by main scss files.
